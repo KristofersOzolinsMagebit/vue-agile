@@ -26,6 +26,10 @@ const mixin = {
 			this.toggleAutoPlay()
 		},
 
+		setAsNavFor (refs) {
+			this.navFor = refs
+		},
+
 		toggleAutoPlay () {
 			let enabled = (!this.settings.unagile && this.settings.autoplay)
 

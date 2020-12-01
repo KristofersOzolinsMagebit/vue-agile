@@ -136,7 +136,8 @@
 				transitionDelay: 0,
 				translateX: 0,
 				widthWindow: 0,
-				widthContainer: 0
+				widthContainer: 0,
+				navFor: []
 			}
 		},
 
@@ -208,6 +209,7 @@
 
 			// Init
 			this.isSSR = false
+			this.navFor = this.settings.asNavFor
 			this.reload()
 		},
 
@@ -253,7 +255,7 @@
 				}
 
 				if (!asNav) {
-					this.settings.asNavFor.forEach(carousel => {
+					this.navFor.forEach(carousel => {
 						if (carousel) {
 							carousel.goTo(n, transition, true)
 						}
